@@ -1,0 +1,28 @@
+<div class="main-wrapper">
+  <app-menu appName="Asgard" logoUrl="../assets/img/logo.png" [menuItems]="menuItems"
+            (menuItemClick)="onMenuItemClick($event)">
+    <template #parentTemplate let-title="title" let-iconClass="iconClass">
+      <i class="nav-icon" [ngClass]="iconClass"></i>
+      <span class="main-nav-label">{{title}}</span>
+    </template>
+    <template #childTemplate let-title="title">
+      <a href="/signup"><span class="nav-label">{{title}}</span></a>
+    </template>
+    <template #arrowTemplate>
+      <span class="arrow-icon fa fa-angle-left"></span>
+    </template>
+  </app-menu>
+  <div class="page-wrapper">
+    <app-header (searchQueryChange)="onSearchQueryChange($event)" (searchQueryEnter)="searchQueryEnter($event)"
+                [notifications]="notifications" notificationLimit="2" (showAllNotifications)="onShowAllClick()"
+                [dashboardApplications]="dashboardApplications" applicationLimit="3"
+                (viewApplication)="onViewApplication($event)"
+                (showNotification)="onShowNotification($event)">
+    </app-header>
+    <div style="padding-top: 200px">
+      <app-tanjay>
+      </app-tanjay>
+    </div>
+    <app-footer appName="ASGARD"></app-footer>
+  </div>
+</div>

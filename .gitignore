@@ -1,0 +1,17 @@
+### Node Modules
+node_modules
+
+### Idea
+.idea
+/.idea_modules
+
+
+### Play
+/.classpath
+/.project
+/.settings
+/RUNNING_PID
+/generators/app/templates/project/project
+
+### Mac
+.DS_Store

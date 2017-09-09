@@ -1,0 +1,66 @@
+$primary-text-color-green: #666;
+$primary-background-color-green: #28323d;
+$secondary-background-color-green: #40b30d;
+$success-color-green: #40b30d;
+
+
+
+// Side Navigation Styles
+$side-nav-background-color-green: $primary-background-color-green;
+$profile-pic-border-color-green: darken($primary-background-color-green, 30%);
+$side-nav-header-color-green: lighten($primary-text-color-green, 50%);
+$side-nav-header-popup-color-green: $primary-background-color-green;
+$side-nav-logo-text-name-color-green: lighten($primary-text-color-green, 100%);
+$side-nav-item-color-green: darken($side-nav-logo-text-name-color-green, 5%);
+$side-nav-item-active-border-color-green: $secondary-background-color-green;
+
+
+
+// Page Content Styles
+$page-content-background-green: lighten($primary-background-color-green, 78%);
+
+// Page Main Navigation Styles
+$main-nav-background-color-green: lighten($primary-background-color-green, 100%);
+$main-nav-border-bottom-color-green: darken($main-nav-background-color-green, 10%);
+$main-nav-menu-handler-background-color-green: $secondary-background-color-green;
+$main-nav-menu-handler-border-color-green: darken($main-nav-menu-handler-background-color-green, 2%);
+$main-nav-menu-handler-background-hover-color-green: darken($main-nav-menu-handler-background-color-green, 10%);
+$main-nav-menu-item-color-green: darken($main-nav-background-color-green, 10%);
+$main-nav-menu-icon-color-green: darken($main-nav-background-color-green, 30%);
+$logout-link-background-color-green: $secondary-background-color-green;
+$logout-link-color-green: lighten($primary-text-color-green, 100%);
+$logout-icon-color-green: lighten($primary-text-color-green, 100%);
+
+// Notification Styles
+
+$notification-box-background-green: lighten($page-content-background-green, 100%);
+$notification-box-border-green: darken($notification-box-background-green, 10%);
+$notification-text-color-green: darken($page-content-background-green, 60%);
+$notification-time-stamp-color-green: $primary-text-color-green;
+$notification-time-pane-color-green: lighten($primary-text-color-green, 100%);
+$notification-time-pane-background-green: $primary-background-color-green;
+$notification-view-all-text-color-green: $secondary-background-color-green;
+$notification-count-background-green: lighten($secondary-background-color-green, 10%);
+$view-all-notification-background-color-green: darken($notification-box-background-green, 2%);
+
+
+//Apps Menu Style
+$apps-box-background-green: lighten($page-content-background-green, 100%);
+$apps-text-color-green: darken($page-content-background-green, 30%);
+$apps-view-all-text-color-green: $secondary-background-color-green;
+
+//Right Settings Panel Styles
+$right-settings-panel-background-green: lighten($main-nav-background-color-green, 90%);
+$right-settings-panel-text-color-green: $primary-text-color-green;
+
+//Switch Box Styles
+$switchbox-background-color-green: lighten($secondary-background-color-green, 100%);
+$switchbox-border-color-green: $secondary-background-color-green;
+$switchbox-color-green: lighten($primary-text-color-green, 100%);
+$switchbox-on-color-green: $secondary-background-color-green;
+$switchbox-off-color-green: lighten($primary-text-color-green, 100%);
+$switchbox-off-text-color-green: lighten($primary-text-color-green, 30%);
+
+//Footer Colors
+$footer-background-green: lighten($page-content-background-green, 100%);
+$footer-border-color-green: lighten($primary-text-color-green, 50%);

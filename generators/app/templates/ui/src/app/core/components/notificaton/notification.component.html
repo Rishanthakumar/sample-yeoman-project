@@ -1,0 +1,22 @@
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+  <i class="fa fa-bell"></i> <span class="label notification-count">{{notifications.count}}</span>
+</a>
+<ul class="dropdown-menu dropdown-notifications animated fadeIn" appStopPropagation>
+  <li *ngFor="let notification of (notifications.items | slice:0:limit)" (click)="onShowNotification(notification)">
+    <div class="dropdown-notifications-box animated zoomIn">
+      <div class="notification-body">
+        <small class="pull-right time-pane">{{notification.time | timeDuration}}</small>
+        <small class="time-stamp">{{notification.title}}</small>
+        <span>{{notification.message}}</span>
+      </div>
+    </div>
+  </li>
+  <li class="view-all-notifications" *ngIf="notifications.items.length > limit">
+    <div class="text-center animated fadeInUp">
+      <a (click)="onShowAllClick()">
+        All Notifications
+      </a>
+    </div>
+  </li>
+</ul>
+

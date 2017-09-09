@@ -1,0 +1,12 @@
+<form novalidate>
+  <ul>
+    <li *ngFor="let value of values" (click)="select(value.value)">{{value.label}}</li>
+  </ul>
+  <input name="firstName" type="text" #fName>
+  <input name="lastName" type="text" #lName>
+  <input name="amount" type="text" #amount>
+  <input type="button" (click)="submitter(fName.value, lName.value, amount.value)">
+</form>
+<div>
+  <h1>{{ response }}</h1>
+</div>

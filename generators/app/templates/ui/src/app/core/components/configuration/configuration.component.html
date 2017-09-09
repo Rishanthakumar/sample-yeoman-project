@@ -1,0 +1,52 @@
+<div class="right-settings-panel animated slideInRight" appScrollApplyClass="settings-panel-top">
+  <h2><i class="fa fa-cog fa-spin"></i>Configurations</h2>
+  <ul>
+    <li class="animated slideInRight">
+      <div class="settings-item">
+        <label class="switch">Hide Mini Side Menu</label>
+        <app-on-off-switch identifier="collapsibleMenuOnOff" [(ngModel)]="settings.hideMiniSideMenu"
+                           (change)="configuration.onHideMiniSideMenuStateChange()"></app-on-off-switch>
+      </div>
+    </li>
+    <li class="animated slideInRight">
+      <div class="settings-item">
+        <label class="switch">Fixed Side Menu</label>
+        <app-on-off-switch identifier="fixedSidebarOnOff" [(ngModel)]="settings.fixedSideMenu"
+                           (change)="configuration.onFixedSidebarStateChange()"></app-on-off-switch>
+      </div>
+    </li>
+    <li class="animated slideInRight">
+      <div class="settings-item">
+        <label class="switch">Sticky Footer</label>
+        <app-on-off-switch identifier="fixedFooterOnOff" [(ngModel)]="settings.stickyFooter"
+                           (change)="configuration.onStickyFooterStateChange()"></app-on-off-switch>
+      </div>
+    </li>
+    <li class="animated slideInRight">
+      <div class="settings-item">
+        <label class="switch">Enable Notifications</label>
+        <app-on-off-switch identifier="showNotificationsOnOff" [(ngModel)]="settings.enableNotifications"
+                           (change)="configuration.onEnableNotificationStateChange()"></app-on-off-switch>
+      </div>
+    </li>
+    <li class="animated slideInRight">
+      <div class="settings-item">
+        <label class="switch">Enable Apps Menu</label>
+        <app-on-off-switch identifier="showAppsMenuOnOff" [(ngModel)]="settings.enableAppMenu"
+                           (change)="configuration.onEnableAppMenuChange()"></app-on-off-switch>
+      </div>
+    </li>
+    <li class="animated slideInRight">
+      <div class="settings-item">
+        <label class="switch">Fixed Header</label>
+        <app-on-off-switch identifier="fixedHeaderOnOff" [(ngModel)]="settings.fixedHeader"
+                           (change)="configuration.onFixedHeaderStateChange()"></app-on-off-switch>
+      </div>
+    </li>
+    <li class="animated slideInRight themes-container">
+      <a class="red-theme" (click)="applyDefaultTheme()">Default Theme</a>
+      <a class="blue-theme" (click)="applyBlueTheme()">Blue Theme</a>
+      <a class="green-theme" (click)="applyGreenTheme()">Green Theme</a>
+    </li>
+  </ul>
+</div>

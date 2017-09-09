@@ -1,0 +1,79 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+:host-context() {
+  .dropdown-application-list {
+    @include themify() {
+      background: getThemifyVariable('apps-box-background');
+      border-color: darken(getThemifyVariable('apps-box-background'), 10%);
+    }
+    @include border-radius(0);
+    background: $apps-box-background;
+    border: 1px solid;
+    padding: 1rem 0 0;
+    text-align: center;
+    width: 30rem;
+
+    li:not(.view-all-apps) {
+      @include transition(.1s all);
+      -webkit-animation-duration: .5s;
+      animation-duration: .5s;
+      border: 1px solid transparent;
+      display: inline-block;
+      margin-bottom: 1rem;
+      max-width: 9rem;
+      text-align: center;
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 65%;
+        position: relative;
+      }
+
+      label {
+        @include themify() {
+          color: getThemifyVariable('apps-text-color');
+        }
+        @include font-size(.9, 1.4);
+        font-weight: 300;
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        @include themify() {
+          background: darken(getThemifyVariable('apps-box-background'), 5%);
+          border-color: darken(getThemifyVariable('apps-box-background'), 10%);
+        }
+        border: 1px solid;
+        cursor: pointer;
+      }
+    }
+
+    .view-all-apps {
+      @include themify() {
+        background: darken(getThemifyVariable('apps-box-background'), 2%);
+        border-color: darken(getThemifyVariable('apps-box-background'), 10%);
+      }
+      -webkit-animation-duration: .5s;
+      animation-duration: .5s;
+      border-bottom: 0;
+      border-top: 1px solid;
+      display: block;
+
+      a {
+        @include themify() {
+          color: getThemifyVariable('apps-view-all-text-color');
+        }
+        @include font-size(.9, 1.4);
+        font-weight: 600;
+
+        &:hover {
+          @include themify() {
+            color: lighten(getThemifyVariable('side-nav-item-color'), 20%);
+          }
+        }
+      }
+    }
+  }
+}

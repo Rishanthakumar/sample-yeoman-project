@@ -1,0 +1,54 @@
+@import '../../../../styles/variables';
+
+.internal-server-error-page {
+  background-image: url('/../../assets/img/bg-500.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+
+  .error-page {
+
+      @include transform(translateY(-50%));
+      bottom: 0;
+      left: 0;
+      margin-left: auto;
+      margin-right: auto;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 50%;
+
+    h1 {
+      @include font-size(16, 1);
+      background: none;
+      color: lighten($secondary-background-color, 70%);
+      display: inline-block;
+      padding: 2rem;
+    }
+
+    .error-page-heading {
+      @include font-size(2.2, 1.2);
+      color: lighten($secondary-background-color, 100%);
+      margin: 0 auto;
+      width: 60%;
+
+
+      span {
+        @include font-size(.8, 1.2);
+        display: block;
+        font-weight: 600;
+      }
+
+      a {
+        background: $secondary-background-color;
+        color: lighten($secondary-background-color, 100%);
+        display: inline-block;
+        padding: .5rem 1rem;
+        text-transform: uppercase;
+      }
+    }
+
+  }
+}

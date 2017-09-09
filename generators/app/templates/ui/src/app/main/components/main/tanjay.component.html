@@ -1,0 +1,17 @@
+<input type="button" name="Refresh" (click)="refresher()" id="Refresh" value="Reload Users">
+<div class="main-wrapper">
+  <table style="width:100%">
+    <tr>
+      <th><a href="./records">FirstName</a></th>
+      <th>LastName</th>
+      <th>Amount</th>
+    </tr>
+    <tr *ngFor="let user of data">
+      <td (click)="editMode($event,edit, user)">{{ user.firstName }}</td>
+      <td>{{ user.lastName }}</td>
+      <div *ngIf="user.edit">
+        <td>{{ user.amount }}</td>
+      </div>
+    </tr>
+  </table>
+</div>

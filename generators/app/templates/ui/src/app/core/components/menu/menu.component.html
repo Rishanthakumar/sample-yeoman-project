@@ -1,0 +1,33 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+  <div class="sidebar-collapse" appSlimScroll>
+    <ul class="nav sidebar-menu">
+      <li class="nav-header">
+        <div class="navbar-brand">
+          <img [src]="logoUrl" class="img-responsive" [attr.title]="appName"/>
+        </div>
+      </li>
+      <li *ngFor="let menuItem of mappedMenuItems" [ngClass]="{ 'active': menuItem.active, 'expanded': menuItem.expanded }">
+        <a (click)="onMenuItemClick(menuItem)">
+          <template [ngOutletContext]="menuItem" [ngTemplateOutlet]="parentTemplate"></template>
+          <template [ngOutletContext]="menuItem" [ngTemplateOutlet]="arrowTemplate" *ngIf="hasChildren(menuItem)"></template>
+        </a>
+        <ul class="nav nav-second-level" *ngIf="hasChildren(menuItem)" id="collapseExample">
+          <li *ngFor="let firstChildMenuItem of menuItem.children" [ngClass]="{ 'active': firstChildMenuItem.active, 'expanded': firstChildMenuItem.expanded }">
+            <a (click)="onMenuItemClick(firstChildMenuItem, [menuItem])">
+              <template [ngOutletContext]="firstChildMenuItem" [ngTemplateOutlet]="childTemplate"></template>
+              <template [ngOutletContext]="menuItem" [ngTemplateOutlet]="arrowTemplate" *ngIf="hasChildren(firstChildMenuItem)"></template>
+            </a>
+            <ul class="nav nav-third-level" *ngIf="hasChildren(firstChildMenuItem)">
+              <li  *ngFor="let secondChildMenuItem of firstChildMenuItem.children" [ngClass]="{ 'active': secondChildMenuItem.active, 'expanded': secondChildMenuItem.expanded }">
+                <a (click)="onMenuItemClick(secondChildMenuItem, [menuItem, firstChildMenuItem])">
+                  <template [ngOutletContext]="secondChildMenuItem" [ngTemplateOutlet]="childTemplate"></template>
+                  <template [ngOutletContext]="menuItem" [ngTemplateOutlet]="arrowTemplate" *ngIf="hasChildren(secondChildMenuItem)"></template>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>

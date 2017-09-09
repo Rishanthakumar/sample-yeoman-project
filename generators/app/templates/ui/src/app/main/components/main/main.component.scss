@@ -1,0 +1,131 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+:host-context(.mini-navbar.hide-mini-side-menu) {
+  .page-wrapper {
+    margin: 0;
+  }
+}
+
+:host-context(.sticky-footer) {
+  .page-wrapper {
+    footer {
+      margin: 0 0 0 220px;
+      position: fixed;
+    }
+  }
+}
+:host-context(.mini-navbar.sticky-footer) {
+  .page-wrapper {
+    footer {
+      margin: 0 0 0 70px;
+      position: fixed;
+    }
+  }
+}
+
+:host-context(.mini-navbar.hide-mini-side-menu.sticky-footer) {
+  .page-wrapper {
+    footer {
+      margin: 0;
+      position: fixed;
+    }
+  }
+}
+
+:host-context(.mini-navbar) {
+
+  .nav-icon {
+    @include transform(scale(1.3));
+  }
+
+  .page-wrapper {
+    margin: 0 0 0 70px;
+  }
+
+  .main-nav-label {
+    display: none;
+  }
+
+  .arrow-icon {
+    display: none;
+  }
+}
+
+.main-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+:host-context() {
+
+  .main-wrapper {
+    @include themify() {
+      background: getThemifyVariable('side-nav-background-color');
+    }
+  }
+
+  .page-wrapper {
+    @include themify() {
+      background: getThemifyVariable('page-content-background');
+    }
+    @include transition(all .4s);
+    margin: 0 0 0 220px;
+    min-height: 100rem;
+    padding: 0 1.5rem;
+    position: relative;
+
+    footer {
+      @include themify() {
+        background: getThemifyVariable('footer-background');
+        border-color: getThemifyVariable('footer-border-color');
+      }
+      @include transition(all .4s);
+      position: absolute;
+      border-top: 1px solid;
+      bottom: 0;
+      left: 0;
+      padding: 1rem;
+      right: 0;
+    }
+  }
+
+
+  .nav-icon {
+    @include themify() {
+      color: darken(getThemifyVariable('side-nav-item-color'), 20%);
+    }
+    margin-right: .6rem;
+  }
+
+}
+
+:host /deep/ li {
+
+  .arrow-icon {
+
+    @include transition(.5s ease-in-out );
+    float: right;
+    margin-top: 3px;
+  }
+
+  &.expanded {
+    .arrow-icon {
+      @include transform(rotate(-90deg));
+    }
+
+    ul {
+      li {
+        .arrow-icon {
+          @include transform(rotate(0deg));
+        }
+
+        &.expanded {
+          .arrow-icon {
+            @include transform(rotate(-90deg));
+          }
+        }
+      }
+    }
+  }
+}

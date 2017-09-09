@@ -1,0 +1,95 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+
+:host-context() {
+
+  .onoffswitch {
+    float: right;
+    position: relative;
+    width: 6.4rem;
+  }
+
+  .onoffswitch-label {
+    @include themify() {
+      border-color: getThemifyVariable('switchbox-border-color');
+    }
+    @include border-radius(2px);
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    cursor: pointer;
+    border: .2rem solid;
+  }
+  .onoffswitch-inner {
+    @include transition(margin 0.3s ease-in 0s);
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+
+    &::before {
+      @include themify() {
+        background-color: getThemifyVariable('switchbox-on-color');
+        color: getThemifyVariable('switchbox-color');
+      }
+      content: "ON";
+      font-weight: 600;
+      padding-left: 1rem;
+      text-align: left;
+    }
+
+    &::after {
+      @include themify() {
+        background-color: getThemifyVariable('switchbox-off-color');
+        color: getThemifyVariable('switchbox-off-text-color');
+      }
+      content: "OFF";
+      font-weight: 600;
+      padding-right: 1rem;
+      text-align: right;
+    }
+
+    &::before,
+    &::after {
+      @include box-sizing(border-box);
+      display: block;
+      float: left;
+      width: 50%;
+      height: 1.8rem;
+      line-height: 1.8rem;
+    }
+  }
+
+  .onoffswitch-switch {
+    @include themify() {
+      background: getThemifyVariable('switchbox-background-color');
+      border-color: getThemifyVariable('switchbox-border-color');
+    }
+    @include border-radius(2px);
+    @include transition(all 0.3s ease-in 0s);
+    display: block;
+    width: 1.8rem;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 4.6rem;
+    border: .2rem solid;
+
+  }
+  .onoffswitch-checkbox {
+    display: none;
+
+    &:checked {
+      + .onoffswitch-label {
+
+        .onoffswitch-inner {
+          margin-left: 0;
+        }
+        .onoffswitch-switch {
+          right: 0;
+        }
+      }
+    }
+  }
+}

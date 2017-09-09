@@ -1,0 +1,13 @@
+<div class="dropdown profile-element">
+  <span class="profile-pic">
+    <img alt="image" class="img-circle" [src]="profileImageUrl"/>
+  </span>
+  <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+    <span class="profile-info">
+      <span class="profile-name">{{userName}}</span>
+    </span>
+  </a>
+  <ul class="dropdown-menu animated fadeInUp">
+    <li *ngFor="let action of customActions"><a (click)="onCustomActionClick(action.value)">{{action.name}}</a></li>
+  </ul>
+</div>

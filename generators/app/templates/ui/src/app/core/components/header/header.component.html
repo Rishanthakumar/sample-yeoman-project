@@ -1,0 +1,34 @@
+<div class="row">
+  <nav class="navbar navbar-static-top" role="navigation">
+    <div class="navbar-header">
+      <a class="menu-handler btn btn-primary " href="#" appSmoothlyMenu=".sidebar-menu" *ngIf="settings.showSidebarMenuToggleButton">
+        <i class="fa fa-bars"></i>
+      </a>
+      <form role="search" class="navbar-form-custom" *ngIf="settings.showSearchBar">
+        <div class="form-group">
+          <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search" [(ngModel)]="searchQuery" (keypress)="onSearchQueryKeyPress($event.keyCode)">
+        </div>
+      </form>
+    </div>
+    <ul class="nav navbar-top-links navbar-right">
+      <li class="dropdown" *ngIf="settings.enableAppMenu && settings.showApplicationMenu">
+        <app-application-menu [dashboardApplications]="dashboardApplications" [applicationLimit]="applicationLimit" (viewApplication)="onViewApplication($event)"></app-application-menu>
+      </li>
+      <li class="dropdown" *ngIf="settings.enableNotifications && settings.showNotificationWidget">
+        <app-notification [notifications]="notifications" [limit]="notificationLimit" (showAllNotifications)="onShowAllClick()" (showNotification)="onShowNotification($event)"></app-notification>
+      </li>
+      <li *ngIf="settings.showSettingsPanel">
+        <a class="right-setting-toggle" (click)="onSettingsClick()">
+          <i class="fa fa-cog"></i>
+        </a>
+      </li>
+      <li class="logout-link">
+        <a class="logout" (click)="onLogoutClick()">
+          <i class="fa fa-power-off"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<app-configuration *ngIf="openSettingsPanel"></app-configuration>
+

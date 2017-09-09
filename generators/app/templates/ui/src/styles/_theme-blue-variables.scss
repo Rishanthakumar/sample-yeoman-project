@@ -1,0 +1,69 @@
+$primary-text-color-blue: #666;
+$primary-background-color-blue: #28323d;
+$secondary-background-color-blue: #2196F3;
+$success-color-blue: #40b30d;
+
+
+
+// Side Navigation Styles
+$side-nav-background-color-blue: $primary-background-color-blue;
+$profile-pic-border-color-blue: darken($primary-background-color-blue, 30%);
+$side-nav-header-color-blue: lighten($primary-text-color-blue, 50%);
+$side-nav-header-popup-color-blue: $primary-background-color-blue;
+$side-nav-logo-text-name-color-blue: lighten($primary-text-color-blue, 100%);
+$side-nav-item-color-blue: darken($side-nav-logo-text-name-color-blue, 5%);
+$side-nav-item-active-border-color-blue: $secondary-background-color-blue;
+
+
+
+// Page Content Styles
+$page-content-background-blue: lighten($primary-background-color-blue, 78%);
+
+// Page Main Navigation Styles
+$main-nav-background-color-blue: lighten($primary-background-color-blue, 100%);
+$main-nav-border-bottom-color-blue: darken($main-nav-background-color-blue, 10%);
+$main-nav-menu-handler-background-color-blue: $secondary-background-color-blue;
+$main-nav-menu-handler-border-color-blue: darken($main-nav-menu-handler-background-color-blue, 2%);
+$main-nav-menu-handler-background-hover-color-blue: darken($main-nav-menu-handler-background-color-blue, 10%);
+$main-nav-menu-item-color-blue: darken($main-nav-background-color-blue, 10%);
+$main-nav-menu-icon-color-blue: darken($main-nav-background-color-blue, 30%);
+$logout-link-background-color-blue: $secondary-background-color-blue;
+$logout-link-color-blue: lighten($primary-text-color-blue, 100%);
+$logout-icon-color-blue: lighten($primary-text-color-blue, 100%);
+
+// Notification Styles
+
+$notification-box-background-blue: lighten($page-content-background-blue, 100%);
+$notification-box-border-blue: darken($notification-box-background-blue, 10%);
+$notification-text-color-blue: darken($page-content-background-blue, 60%);
+$notification-time-stamp-color-blue: $primary-text-color-blue;
+$notification-time-pane-color-blue: lighten($primary-text-color-blue, 100%);
+$notification-time-pane-background-blue: $primary-background-color-blue;
+$notification-view-all-text-color-blue: $secondary-background-color-blue;
+$notification-count-background-blue: lighten($secondary-background-color-blue, 10%);
+$view-all-notification-background-color-blue: darken($notification-box-background-blue, 2%);
+
+
+//Apps Menu Style
+$apps-box-background-blue: lighten($page-content-background-blue, 100%);
+$apps-text-color-blue: darken($page-content-background-blue, 30%);
+$apps-view-all-text-color-blue: $secondary-background-color-blue;
+
+//Right Settings Panel Styles
+$right-settings-panel-background-blue: lighten($main-nav-background-color-blue, 90%);
+$right-settings-panel-text-color-blue: $primary-text-color-blue;
+
+//Switch Box Styles
+$switchbox-background-color-blue: lighten($secondary-background-color-blue, 100%);
+$switchbox-border-color-blue: $secondary-background-color-blue;
+$switchbox-color-blue: lighten($primary-text-color-blue, 100%);
+$switchbox-on-color-blue: $secondary-background-color-blue;
+$switchbox-off-color-blue: lighten($primary-text-color-blue, 100%);
+$switchbox-off-text-color-blue: lighten($primary-text-color-blue, 30%);
+
+
+//Footer Colors
+$footer-background-blue: lighten($page-content-background-blue, 100%);
+$footer-border-color-blue: lighten($primary-text-color-blue, 50%);
+
+

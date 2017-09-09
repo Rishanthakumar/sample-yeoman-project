@@ -1,0 +1,16 @@
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+  <i class="fa fa-th"></i>
+</a>
+<ul class="dropdown-menu dropdown-application-list animated fadeIn" appStopPropagation>
+  <li class="animated zoomIn" *ngFor="let application of (applications | slice:0:limit)" (click)="onViewApplication(application)">
+    <img [src]="application.imageUrl">
+    <label>{{application.name}}</label>
+  </li>
+  <li class="view-all-apps" *ngIf="enableShowMoreButton()">
+    <div class="text-center animated fadeInUp">
+      <a (click)="onMoreClick()">
+        More
+      </a>
+    </div>
+  </li>
+</ul>

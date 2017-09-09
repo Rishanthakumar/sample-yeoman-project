@@ -1,0 +1,27 @@
+/* this file will be extracted to main dist folder and is imported in index.html */
+/* This file is for setting global styles  */
+
+/* Dependency import - start */
+@import '../../node_modules/bootstrap/dist/css/bootstrap.css';
+@import '../../node_modules/font-awesome/css/font-awesome.css';
+@import '../../node_modules/animate.css/animate.css';
+@import '../../node_modules/pace-js/themes/blue/pace-theme-minimal.css';
+@import '../../node_modules/toastr/build/toastr.css';
+/* Dependency import - end */
+
+@import 'compass';
+@import 'variables';
+@import 'mixins';
+
+
+body {
+  font-family: $primary-font;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

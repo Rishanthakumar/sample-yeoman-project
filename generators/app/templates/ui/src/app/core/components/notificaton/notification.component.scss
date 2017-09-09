@@ -1,0 +1,91 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+// Notification Box
+
+:host-context() {
+
+  .dropdown-notifications {
+    @include themify() {
+      background: getThemifyVariable('notification-box-background');
+      border-color: getThemifyVariable('notification-box-border');
+    }
+    @include border-radius(0);
+    border: 1px solid;
+    min-width: 300px;
+    padding: 0;
+
+     li {
+       @include themify() {
+         border-color: getThemifyVariable('notification-box-border');
+       }
+      border-bottom: 1px solid;
+
+      .dropdown-notifications-box {
+        -webkit-animation-duration: .5s;
+        animation-duration: .5s;
+      }
+    }
+
+    .notification-body {
+      @include themify() {
+        color: getThemifyVariable('notification-text-color');
+      }
+      @include font-size(.9, 1.4);
+      padding: 1rem;
+    }
+
+    .time-pane {
+      @include themify() {
+        background: getThemifyVariable('notification-time-pane-background');
+        color: getThemifyVariable('notification-time-pane-color');
+      }
+      @include border-radius(2px);
+      @include font-size(.9, 1.4);
+      font-weight: 600;
+      padding: .2rem .5rem;
+    }
+
+    .time-stamp {
+      @include themify() {
+        color: getThemifyVariable('notification-time-stamp-color');
+      }
+      @include font-size(.8, 1.4);
+      display: block;
+    }
+
+    .view-all-notifications {
+      @include themify() {
+        background: getThemifyVariable('view-all-notification-background-color');
+      }
+      -webkit-animation-duration: .5s;
+      animation-duration: .5s;
+      border-bottom: 0;
+      display: block;
+
+      a {
+        @include themify() {
+          color: getThemifyVariable('notification-view-all-text-color');
+        }
+        @include font-size(.9, 1.4);
+        font-weight: 600;
+
+        &:hover {
+          @include themify() {
+            color: darken(getThemifyVariable('notification-view-all-text-color'), 5%);
+          }
+        }
+      }
+    }
+  }
+
+  .notification-count {
+    @include themify() {
+      background: getThemifyVariable('notification-count-background');
+    }
+    padding: .3rem;
+    position: absolute;
+    top: .1rem;
+    right: .3rem;
+  }
+}

@@ -1,0 +1,7 @@
+<div class="onoffswitch">
+  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" [id]="identifier" (blur)="onBlur()" [(ngModel)]="value" [disabled]="isDisabled">
+  <label class="onoffswitch-label" [attr.for]="identifier">
+    <span class="onoffswitch-inner"></span>
+    <span class="onoffswitch-switch"></span>
+  </label>
+</div>

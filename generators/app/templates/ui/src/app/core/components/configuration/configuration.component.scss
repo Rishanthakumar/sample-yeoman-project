@@ -1,0 +1,108 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+//Right Settings Panel
+
+:host-context() {
+
+  .right-settings-panel {
+    @include themify() {
+      background: getThemifyVariable('right-settings-panel-background');
+      border-color: darken(getThemifyVariable('right-settings-panel-background'), 10%);
+      color: getThemifyVariable('right-settings-panel-text-color');
+    }
+    @include transition(.5s all);
+    border-left: 1px solid;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 61px;
+    width: 250px;
+    z-index: 999;
+
+    &.settings-panel-top {
+      top: 0;
+    }
+
+    h2 {
+      @include themify() {
+        background: getThemifyVariable('primary-background-color');
+        color: lighten(getThemifyVariable('primary-text-color'), 80%);
+      }
+      @include font-size(.7, 1.8);
+      font-weight: 600;
+      letter-spacing: .1rem;
+      margin: 1rem;
+      padding: .5rem;
+      text-align: center;
+      text-transform: uppercase;
+
+      i {
+        @include font-size(1.5, 1.5);
+        padding: 0;
+        margin-right: .5rem;
+        vertical-align: sub;
+
+        &::before {
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+
+    ul {
+      padding: 10px 15px;
+
+      li {
+        list-style-type: none;
+
+        .settings-item {
+          @include font-size(.8, 1.8);
+          padding: 1rem 0;
+          text-align: left;
+
+          label {
+            font-weight: 300;
+          }
+        }
+
+        &.themes-container {
+          a {
+            @include themify() {
+              color: lighten(getThemifyVariable('right-settings-panel-text-color'), 100%);
+            }
+            @include font-size(.7, 1.8);
+            @include transition(.5s all);
+            background-image: url('../../../../assets/img/bg-dark.png');
+            background-size: cover;
+            cursor: pointer;
+            display: block;
+            margin: .5rem 0;
+            padding: .5rem;
+            text-align: center;
+            text-transform: uppercase;
+
+
+            &.blue-theme {
+              background-color: $theme-blue-color;
+            }
+
+            &.red-theme {
+              background-color: $theme-red-color;
+              background-size: contain;
+            }
+
+            &.green-theme {
+              background-color: $theme-green-color;
+              background-size: initial;
+            }
+
+            &:hover {
+              @include opacity(.9);
+            }
+          }
+        }
+      }
+    }
+  }
+}

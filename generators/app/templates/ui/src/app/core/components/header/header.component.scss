@@ -1,0 +1,160 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+// Top Fixed Navigation Bar Main Styles
+:host-context(.fixed-navbar) {
+  .navbar {
+    position: fixed;
+    width: calc(100% - 220px);
+  }
+}
+
+:host-context(.mini-navbar) {
+  .navbar {
+    position: fixed;
+    width: calc(100% - 70px);
+  }
+}
+
+:host-context(.hide-mini-side-menu.mini-navbar) {
+  .navbar {
+    position: fixed;
+    width: 100%;
+  }
+}
+
+
+// Top Navigation Bar Main Styles
+:host-context() {
+
+  .navbar {
+    @include themify() {
+      background: getThemifyVariable('main-nav-background-color');
+      border-bottom-color: getThemifyVariable('main-nav-border-bottom-color');
+    }
+    @include transition(1s all);
+    border-bottom: 1px solid;
+    min-height: 60px;
+  }
+
+  // Top Navigation Bar Left Side Items Styles
+  .navbar-header {
+    float: left;
+
+    // Top Navigation Bar Menu Handles Styles
+    .menu-handler {
+      @include themify() {
+        background: getThemifyVariable('main-nav-menu-handler-background-color');
+        border-color: getThemifyVariable('main-nav-menu-handler-border-color');
+      }
+      @include border-radius(2px);
+      float: left;
+      margin: 1.4rem .5rem .5rem 2rem;
+      padding: .4rem 1.2rem;
+
+      &:hover {
+        @include themify() {
+          background: getThemifyVariable('main-nav-menu-handler-background-hover-color');
+        }
+      }
+    }
+
+    // Top Navigation Bar Search Field Styles
+    .navbar-form-custom {
+      display: block;
+      float: left;
+      height: 5rem;
+      padding: 0;
+      width: 20rem;
+
+      .form-control {
+        background: none;
+        border: medium none;
+        box-shadow: none;
+        height: 6rem;
+        margin: 0;
+        z-index: 2000;
+      }
+    }
+  }
+
+  // Top Navigation Bar Right Side Styles
+  .navbar-right {
+    float: right;
+    margin-right: 0;
+  }
+
+  // Top Navigation Bar Right Side Styles
+  /deep/ .navbar-top-links {
+
+    li {
+      display: inline-block;
+      padding: 1rem 0;
+
+      app-notification,
+      app-application-menu {
+        display: block;
+        padding: 1rem;
+      }
+
+      a {
+        @include themify() {
+          color: getThemifyVariable('main-nav-menu-item-color');
+        }
+        @include transition(.4s all);
+        background-color: transparent;
+        cursor: pointer;
+        padding: 1rem;
+        position: relative;
+
+
+        &:hover {
+          @include themify() {
+            color: darken(getThemifyVariable('main-nav-menu-item-color'), 10%);;
+          }
+          background: none;
+
+          i {
+            @include themify() {
+              color: darken(getThemifyVariable('main-nav-menu-icon-color'), 20%);;
+            }
+          }
+        }
+
+        i {
+          @include themify() {
+            color: getThemifyVariable('main-nav-menu-icon-color');
+          }
+        }
+      }
+
+      // Top Navigation Bar Logout Button Style
+      &.logout-link {
+        @include themify() {
+          background:  getThemifyVariable('logout-link-background-color');
+        }
+        padding: 1rem;
+
+        &:hover {
+          @include themify() {
+            background: darken(getThemifyVariable('logout-link-background-color'), 10%);
+          }
+        }
+
+        a {
+          &.logout {
+            @include themify() {
+              color: getThemifyVariable('logout-link-color');
+            }
+
+            i {
+              @include themify() {
+                color: getThemifyVariable('logout-icon-color');
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

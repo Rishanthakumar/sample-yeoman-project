@@ -1,0 +1,69 @@
+$primary-text-color: #666;
+$primary-background-color: #28323d;
+$secondary-background-color: #D32F2F;
+$success-color: #40b30d;
+
+
+
+// Side Navigation Styles
+$side-nav-background-color: $primary-background-color;
+$profile-pic-border-color: darken($primary-background-color, 30%);
+$side-nav-header-color: lighten($primary-text-color, 50%);
+$side-nav-header-popup-color: $primary-background-color;
+$side-nav-logo-text-name-color: lighten($primary-text-color, 100%);
+$side-nav-item-color: darken($side-nav-logo-text-name-color, 5%);
+$side-nav-item-active-border-color: $secondary-background-color;
+
+
+
+// Page Content Styles
+$page-content-background: lighten($primary-background-color, 78%);
+
+// Page Main Navigation Styles
+$main-nav-background-color: lighten($primary-background-color, 100%);
+$main-nav-border-bottom-color: darken($main-nav-background-color, 10%);
+$main-nav-menu-handler-background-color: $secondary-background-color;
+$main-nav-menu-handler-border-color: darken($main-nav-menu-handler-background-color, 2%);
+$main-nav-menu-handler-background-hover-color: darken($main-nav-menu-handler-background-color, 10%);
+$main-nav-menu-item-color: darken($main-nav-background-color, 10%);
+$main-nav-menu-icon-color: darken($main-nav-background-color, 30%);
+$logout-link-background-color: $secondary-background-color;
+$logout-link-color: lighten($primary-text-color, 100%);
+$logout-icon-color: lighten($primary-text-color, 100%);
+
+// Notification Styles
+
+$notification-box-background: lighten($page-content-background, 100%);
+$notification-box-border: darken($notification-box-background, 10%);
+$notification-text-color: darken($page-content-background, 60%);
+$notification-time-stamp-color: $primary-text-color;
+$notification-time-pane-color: lighten($primary-text-color, 100%);
+$notification-time-pane-background: $primary-background-color;
+$notification-view-all-text-color: $secondary-background-color;
+$notification-count-background: lighten($secondary-background-color, 10%);
+$view-all-notification-background-color: darken($notification-box-background, 2%);
+
+
+//Apps Menu Style
+$apps-box-background: lighten($page-content-background, 100%);
+$apps-text-color: darken($page-content-background, 30%);
+$apps-view-all-text-color: $secondary-background-color;
+
+//Right Settings Panel Styles
+$right-settings-panel-background: lighten($main-nav-background-color, 90%);
+$right-settings-panel-text-color: $primary-text-color;
+
+//Switch Box Styles
+
+$switchbox-background-color: lighten($secondary-background-color, 100%);
+$switchbox-border-color: $secondary-background-color;
+$switchbox-color: lighten($primary-text-color, 100%);
+$switchbox-on-color: $secondary-background-color;
+$switchbox-off-color: lighten($primary-text-color, 100%);
+$switchbox-off-text-color: lighten($primary-text-color, 30%);
+
+
+//Footer Colors
+$footer-background: lighten($page-content-background, 100%);
+$footer-border-color: lighten($primary-text-color, 50%);
+

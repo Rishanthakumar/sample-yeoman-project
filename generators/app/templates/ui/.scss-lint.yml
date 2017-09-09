@@ -1,0 +1,41 @@
+#########################
+## Sass Lint File
+#########################
+# Linter Options
+options:
+  # Don't merge default rules
+  merge-default-rules: true
+  # Set the formatter to 'html'
+  #formatter: html
+  # Output file instead of logging results
+  #output-file: 'linters/sass-lint.html'
+# File Options
+
+scss_files: 'src/**/*.scss'
+
+# Rule Configuration
+rules:
+  no-vendor-prefixes:
+    - 1
+    -
+      'excluded-identifiers':
+        - 'webkit'
+        - 'moz'
+        - 'ms'
+  no-duplicate-properties:
+    - 1
+    -
+      exclude:
+        - font-size
+        - line-height
+        - display
+        - src
+        - cursor
+  nesting-depth:
+    - 1
+    - max-depth: 7
+  no-important:
+    - 0
+  no-misspelled-properties:
+      - 1
+      - extra-properties: ['touch-callout']
