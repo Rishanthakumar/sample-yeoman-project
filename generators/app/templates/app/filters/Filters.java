@@ -10,6 +10,6 @@ public class Filters extends DefaultHttpFilters {
     @Inject
     public Filters(CORSFilter corsFilter) {
         super(corsFilter);
-        Logger.debug("Filter --->>>>>");
+        Logger.debug("Sample Filter");
     }
 }

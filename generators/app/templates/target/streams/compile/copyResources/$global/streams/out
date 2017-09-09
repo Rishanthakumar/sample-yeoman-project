@@ -1,0 +1,6 @@
+[debug] Copy resource mappings: 
+[debug] 	(/Users/rishanthakumarrasarathinam/Documents/projects/play-angular2-cli/conf/application.conf,/Users/rishanthakumarrasarathinam/Documents/projects/play-angular2-cli/target/scala-2.11/classes/application.conf)
+[debug] 	(/Users/rishanthakumarrasarathinam/Documents/projects/play-angular2-cli/conf/evolutions,/Users/rishanthakumarrasarathinam/Documents/projects/play-angular2-cli/target/scala-2.11/classes/evolutions)
+[debug] 	(/Users/rishanthakumarrasarathinam/Documents/projects/play-angular2-cli/conf/logback.xml,/Users/rishanthakumarrasarathinam/Documents/projects/play-angular2-cli/target/scala-2.11/classes/logback.xml)
+[debug] 	(/Users/rishanthakumarrasarathinam/Documents/projects/play-angular2-cli/conf/routes,/Users/rishanthakumarrasarathinam/Documents/projects/play-angular2-cli/target/scala-2.11/classes/routes)
+[debug] 	(/Users/rishanthakumarrasarathinam/Documents/projects/play-angular2-cli/conf/evolutions/default,/Users/rishanthakumarrasarathinam/Documents/projects/play-angular2-cli/target/scala-2.11/classes/evolutions/default)
